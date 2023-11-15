@@ -64,7 +64,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nPassed\nFailed",
+   "options": "Open\nPass\nFail",
    "read_only": 1
   },
   {

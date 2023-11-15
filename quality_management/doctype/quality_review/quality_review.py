@@ -16,13 +16,13 @@ class QualityReview(Document):
 		self.set_status()
 
 	def set_status(self):
-		# if any child item is failed, fail the parent
+		# if any child item is Fail, fail the parent
 		if not len(self.reviews or []) or any([d.status == "Open" for d in self.reviews]):
 			self.status = "Open"
-		elif any([d.status == "Failed" for d in self.reviews]):
-			self.status = "Failed"
+		elif any([d.status == "Fail" for d in self.reviews]):
+			self.status = "Fail"
 		else:
-			self.status = "Passed"
+			self.status = "Pass"
 
 
 def review():
